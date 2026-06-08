@@ -1,0 +1,2751 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ══════════════════════════════
+     SEO ARCHITEKTUR
+══════════════════════════════ -->
+<title>Elektriker Vaihingen Enz | Elektro ESW – Installation, Smart Home & PV-Anlagen</title>
+<meta name="description" content="Elektro ESW – Ihr Elektriker in Vaihingen (Enz). Elektroinstallation, Smart Home & PV-Anlagen. Inhabergeführt, zuverlässig, fair. Jetzt anrufen: 07042/120734"/>
+<meta name="keywords" content="Elektriker Vaihingen Enz, Elektroinstallation Vaihingen, Smart Home Vaihingen Enz, PV Anlage Elektriker Vaihingen, Wallbox Vaihingen, Elektro ESW"/>
+<meta name="robots" content="index,follow"/>
+<meta name="geo.region" content="DE-BW"/>
+<meta name="geo.placename" content="Vaihingen an der Enz"/>
+<meta name="geo.position" content="48.9327;8.9607"/>
+<link rel="canonical" href="https://www.elektro-esw.de/"/>
+
+<!-- OG Tags -->
+<meta property="og:title" content="Elektriker Vaihingen Enz | Elektro ESW"/>
+<meta property="og:description" content="Ihr Elektriker in Vaihingen (Enz) – Elektroinstallation, Smart Home & PV-Anlagen. Inhabergeführt & zuverlässig."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="de_DE"/>
+<meta property="og:url" content="https://www.elektro-esw.de/"/>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ElectricalContractor"],
+  "name": "Elektro ESW – Elektro-Service Wolfgang",
+  "description": "Inhabergeführter Elektrobetrieb in Vaihingen (Enz). Elektroinstallation, Smart Home, PV-Anlagen und mehr.",
+  "url": "https://www.elektro-esw.de",
+  "telephone": ["+4907042120734", "+491607846022"],
+  "faxNumber": "+4907042120735",
+  "email": "elektro-service-wolfgang@web.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Auricher Straße 19",
+    "addressLocality": "Vaihingen an der Enz",
+    "postalCode": "71665",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.9327,
+    "longitude": 8.9607
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}
+  ],
+  "areaServed": [
+    "Vaihingen an der Enz","Mühlacker","Sachsenheim","Bietigheim-Bissingen","Ludwigsburg",
+    "Pforzheim","Enzkreis","Sersheim","Ensingen","Kleinglattbach","Horrheim","Aurich"
+  ],
+  "priceRange": "€€",
+  "hasMap": "https://maps.google.com/?q=Auricher+Straße+19,+71665+Vaihingen+an+der+Enz"
+}
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+
+<style>
+/* ══════════════════════════════
+   CSS VARIABLEN & RESET
+══════════════════════════════ */
+:root {
+  --void:           #06080A;
+  --base:           #0C0F12;
+  --layer:          #131820;
+  --layer-hover:    #1A2230;
+  --primary:        #F5A623;
+  --primary-hover:  #FFB840;
+  --primary-glow:   rgba(245,166,35,0.18);
+  --primary-deep:   #C47D0A;
+  --secondary:      #1E8A5E;
+  --secondary-glow: rgba(30,138,94,0.15);
+  --text-main:      #F0EDE8;
+  --text-muted:     #8A8F9A;
+  --text-faint:     #4A5060;
+  --border:         rgba(255,255,255,0.06);
+  --border-m:       rgba(255,255,255,0.12);
+  --font-display:   'Barlow Condensed', sans-serif;
+  --font-body:      'Barlow', sans-serif;
+  --ease:           cubic-bezier(.19,1,.22,1);
+  --ease-s:         cubic-bezier(.4,0,.2,1);
+  --t-fast:         .2s;
+  --t-mid:          .45s;
+  --t-slow:         .75s;
+  --r:              6px;
+  --r-l:            12px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  background:var(--void);
+  color:var(--text-main);
+  font-family:var(--font-body);
+  font-weight:400;
+  line-height:1.6;
+  overflow-x:hidden;
+  cursor:none;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{cursor:none;border:none;background:none;font-family:inherit;}
+ul,ol{list-style:none;}
+
+/* ══════════════════════════════
+   CUSTOM CURSOR
+══════════════════════════════ */
+#cursor-dot{
+  position:fixed;width:10px;height:10px;
+  background:var(--primary);border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);
+  transition:transform .1s,width .2s,height .2s,background .2s;
+}
+#cursor-ring{
+  position:fixed;width:38px;height:38px;
+  border:1.5px solid rgba(245,166,35,.5);
+  border-radius:50%;pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:transform .12s var(--ease),width .3s,height .3s,border-color .3s,opacity .3s;
+}
+body.cursor-hover #cursor-dot{width:16px;height:16px;}
+body.cursor-hover #cursor-ring{width:52px;height:52px;border-color:var(--primary);}
+
+/* ══════════════════════════════
+   TYPOGRAPHY SYSTEM
+══════════════════════════════ */
+.display-xl{
+  font-family:var(--font-display);
+  font-size:clamp(3.2rem,7vw,7.5rem);
+  font-weight:800;
+  line-height:.95;
+  letter-spacing:-.02em;
+  text-transform:uppercase;
+}
+.display-l{
+  font-family:var(--font-display);
+  font-size:clamp(2.4rem,5vw,5rem);
+  font-weight:700;
+  line-height:1;
+  text-transform:uppercase;
+  letter-spacing:-.01em;
+}
+.display-m{
+  font-family:var(--font-display);
+  font-size:clamp(1.6rem,3vw,2.8rem);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+}
+.eyebrow{
+  font-family:var(--font-display);
+  font-size:.75rem;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--primary);
+  display:flex;align-items:center;gap:.6rem;
+}
+.eyebrow::before{content:'';width:24px;height:1.5px;background:var(--primary);}
+.body-l{font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.7;color:var(--text-muted);}
+.body-m{font-size:.95rem;line-height:1.65;color:var(--text-muted);}
+
+/* ══════════════════════════════
+   BUTTONS
+══════════════════════════════ */
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  padding:.85rem 2rem;
+  font-family:var(--font-display);
+  font-size:.85rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  border-radius:var(--r);
+  position:relative;overflow:hidden;
+  transition:transform var(--t-fast) var(--ease-s),
+             box-shadow var(--t-mid) var(--ease);
+}
+.btn::before{
+  content:'';position:absolute;inset:0;
+  transform:translateX(-100%);
+  transition:transform .4s var(--ease);
+}
+.btn:hover::before{transform:translateX(0);}
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{
+  background:var(--primary);color:var(--void);
+}
+.btn-primary::before{background:var(--primary-hover);}
+.btn-primary:hover{box-shadow:0 12px 40px rgba(245,166,35,.35);}
+
+.btn-outline{
+  background:transparent;color:var(--text-main);
+  border:1.5px solid var(--border-m);
+}
+.btn-outline::before{background:rgba(255,255,255,.05);}
+.btn-outline:hover{border-color:rgba(255,255,255,.25);}
+
+.btn-ghost{
+  background:rgba(245,166,35,.08);
+  color:var(--primary);
+  border:1px solid rgba(245,166,35,.2);
+}
+.btn-ghost::before{background:rgba(245,166,35,.08);}
+.btn-ghost:hover{border-color:rgba(245,166,35,.4);}
+
+.micro-copy{
+  font-size:.72rem;color:var(--text-faint);
+  letter-spacing:.05em;margin-top:.5rem;
+  font-family:var(--font-display);
+}
+
+/* ══════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════ */
+[data-reveal]{
+  opacity:0;
+  transition:opacity var(--t-slow) var(--ease),
+             transform var(--t-slow) var(--ease);
+}
+[data-reveal="up"]{transform:translateY(40px);}
+[data-reveal="left"]{transform:translateX(-40px);}
+[data-reveal="right"]{transform:translateX(40px);}
+[data-reveal="scale"]{transform:scale(.94);}
+[data-delay="1"]{transition-delay:.1s;}
+[data-delay="2"]{transition-delay:.2s;}
+[data-delay="3"]{transition-delay:.35s;}
+[data-delay="4"]{transition-delay:.5s;}
+[data-delay="5"]{transition-delay:.65s;}
+[data-reveal].revealed{opacity:1;transform:none;}
+
+/* ══════════════════════════════
+   SECTION BASE
+══════════════════════════════ */
+section{position:relative;}
+.container{
+  max-width:1240px;margin:0 auto;
+  padding:0 clamp(1.2rem,4vw,3rem);
+}
+.section-pad{padding:clamp(4rem,8vw,8rem) 0;}
+
+/* ══════════════════════════════
+   NAVIGATION
+══════════════════════════════ */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:1.4rem clamp(1.2rem,4vw,3rem);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background var(--t-mid) var(--ease-s),
+             padding var(--t-mid) var(--ease-s),
+             border-color var(--t-mid);
+  border-bottom:1px solid transparent;
+}
+#nav.stuck{
+  background:rgba(6,8,10,.88);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  padding:1rem clamp(1.2rem,4vw,3rem);
+  border-color:var(--border);
+}
+.nav-logo{
+  display:flex;flex-direction:column;
+}
+.nav-logo-mark{
+  font-family:var(--font-display);
+  font-size:1.35rem;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;
+  color:var(--text-main);
+}
+.nav-logo-mark span{color:var(--primary);}
+.nav-logo-sub{
+  font-family:var(--font-display);
+  font-size:.62rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--text-muted);
+}
+.nav-links{
+  display:flex;align-items:center;gap:2rem;
+}
+.nav-links a{
+  font-family:var(--font-display);
+  font-size:.8rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-muted);
+  transition:color var(--t-fast);
+}
+.nav-links a:hover{color:var(--text-main);}
+.nav-cta{
+  display:flex;align-items:center;gap:.8rem;
+}
+.nav-phone{
+  font-family:var(--font-display);
+  font-size:.8rem;font-weight:700;
+  letter-spacing:.05em;color:var(--text-muted);
+  transition:color var(--t-fast);
+}
+.nav-phone:hover{color:var(--primary);}
+
+/* Hamburger */
+.hamburger{
+  display:none;flex-direction:column;gap:5px;
+  width:32px;cursor:none;
+}
+.hamburger span{
+  height:1.5px;background:var(--text-main);
+  transition:transform var(--t-mid) var(--ease),
+             opacity var(--t-fast);
+}
+/* Mobile Drawer */
+.nav-drawer{
+  position:fixed;inset:0;z-index:999;
+  background:var(--void);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:2.5rem;
+  transform:translateY(-100%);
+  transition:transform .5s var(--ease);
+}
+.nav-drawer.open{transform:translateY(0);}
+.nav-drawer a{
+  font-family:var(--font-display);
+  font-size:2.5rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;
+  color:var(--text-main);
+  transition:color var(--t-fast);
+}
+.nav-drawer a:hover{color:var(--primary);}
+.drawer-phone{
+  font-family:var(--font-display);
+  font-size:1.1rem;color:var(--primary);
+  letter-spacing:.08em;
+}
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+#hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  padding-top:80px;
+}
+
+/* Circuit background pattern */
+#hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(245,166,35,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,166,35,.03) 1px, transparent 1px);
+  background-size:60px 60px;
+  animation:gridShift 20s linear infinite;
+}
+@keyframes gridShift{
+  from{background-position:0 0;}
+  to{background-position:60px 60px;}
+}
+
+/* Ember glow */
+#hero::after{
+  content:'';position:absolute;
+  top:-20%;right:40%;width:60vw;height:120%;
+  background:radial-gradient(ellipse at 60% 40%,
+    rgba(245,166,35,.12) 0%,
+    rgba(245,166,35,.04) 40%,
+    transparent 70%);
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;z-index:2;
+  padding:clamp(3rem,6vw,5rem) clamp(1.2rem,4vw,3rem) clamp(3rem,6vw,5rem) clamp(1.2rem,5vw,5rem);
+}
+.hero-eyebrow{
+  animation:heroFadeUp .7s var(--ease) .2s both;
+  margin-bottom:1.4rem;
+}
+.hero-h1{
+  animation:heroFadeUp .7s var(--ease) .4s both;
+  margin-bottom:1.4rem;
+}
+.hero-h1 .line-accent{color:var(--primary);}
+.hero-h1 .line-light{
+  font-weight:300;
+  font-size:clamp(1.8rem,4vw,4rem);
+  display:block;
+}
+.hero-sub{
+  animation:heroFadeUp .7s var(--ease) .6s both;
+  margin-bottom:2rem;
+  max-width:480px;
+}
+.hero-actions{
+  animation:heroFadeUp .7s var(--ease) .75s both;
+  display:flex;flex-wrap:wrap;gap:1rem;align-items:center;
+  margin-bottom:.8rem;
+}
+.hero-micro{
+  animation:heroFadeUp .7s var(--ease) .85s both;
+}
+.hero-trust{
+  animation:heroFadeUp .7s var(--ease) .95s both;
+  display:flex;align-items:center;gap:1.5rem;
+  margin-top:2rem;
+  padding-top:2rem;
+  border-top:1px solid var(--border);
+  flex-wrap:wrap;
+}
+.trust-item{
+  display:flex;flex-direction:column;
+}
+.trust-val{
+  font-family:var(--font-display);
+  font-size:1.6rem;font-weight:800;
+  color:var(--primary);line-height:1;
+}
+.trust-label{
+  font-size:.72rem;color:var(--text-muted);
+  letter-spacing:.08em;text-transform:uppercase;
+  font-family:var(--font-display);
+}
+.trust-divider{width:1px;height:36px;background:var(--border-m);}
+
+/* Hero visual */
+.hero-visual{
+  position:relative;z-index:2;
+  height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  padding-right:clamp(1.2rem,4vw,3rem);
+}
+.hero-photo-frame{
+  position:relative;
+  width:100%;max-width:520px;
+  height:clamp(400px,60vh,620px);
+  border-radius:var(--r-l);
+  overflow:hidden;
+  animation:heroFadeUp .9s var(--ease) .3s both;
+}
+.hero-photo-bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(135deg, #1A2230 0%, #0C1420 50%, #06080A 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+/* Elektro-themed SVG decoration */
+.hero-photo-bg svg{opacity:.12;}
+
+/* Corner accent */
+.hero-photo-frame::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--primary),transparent);
+  z-index:3;
+}
+.hero-photo-frame::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(6,8,10,.7) 0%, transparent 50%);
+  z-index:2;
+  pointer-events:none;
+}
+/* Photo comment marker */
+.hero-photo-label{
+  position:absolute;bottom:1.5rem;left:1.5rem;z-index:3;
+  font-family:var(--font-display);
+  font-size:.72rem;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(255,255,255,.5);
+}
+
+.hero-badge{
+  position:absolute;top:1.5rem;right:-1rem;z-index:5;
+  background:var(--primary);color:var(--void);
+  padding:.9rem 1.2rem;border-radius:var(--r);
+  font-family:var(--font-display);
+  font-size:.7rem;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;
+  text-align:center;line-height:1.3;
+  box-shadow:0 8px 32px rgba(245,166,35,.4);
+  animation:floatBadge 5s ease-in-out infinite;
+}
+@keyframes floatBadge{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
+}
+
+/* Scroll indicator */
+.scroll-indicator{
+  position:absolute;bottom:2rem;left:50%;
+  transform:translateX(-50%);
+  display:flex;flex-direction:column;
+  align-items:center;gap:.5rem;
+  animation:heroFadeUp .7s var(--ease) 1.2s both;
+  z-index:2;
+}
+.scroll-line{
+  width:1px;height:48px;
+  background:linear-gradient(to bottom, transparent, var(--primary), transparent);
+  animation:scrollPulse 2.4s ease-in-out infinite;
+}
+@keyframes scrollPulse{
+  0%,100%{opacity:0;transform:scaleY(0);}
+  50%{opacity:1;transform:scaleY(1);}
+}
+.scroll-text{
+  font-family:var(--font-display);font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--text-faint);
+  writing-mode:vertical-rl;
+}
+
+/* Stats bar */
+.stats-bar{
+  position:relative;z-index:2;
+  grid-column:1/-1;
+  background:var(--layer);
+  border-top:1px solid var(--border);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.stat-item{
+  padding:1.4rem clamp(1rem,3vw,2rem);
+  display:flex;flex-direction:column;gap:.25rem;
+  border-right:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.stat-item::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:var(--primary);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease);
+}
+.stat-item:hover::before{transform:scaleX(1);}
+.stat-item:last-child{border-right:none;}
+.stat-num{
+  font-family:var(--font-display);font-size:1.9rem;font-weight:800;
+  color:var(--primary);line-height:1;
+}
+.stat-txt{
+  font-family:var(--font-display);font-size:.7rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);
+}
+
+@keyframes heroFadeUp{
+  from{opacity:0;transform:translateY(32px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ══════════════════════════════
+   URGENCY TICKER
+══════════════════════════════ */
+#ticker{
+  background:var(--primary);
+  padding:.75rem 0;
+  overflow:hidden;
+}
+.ticker-inner{
+  display:flex;
+  animation:ticker 28s linear infinite;
+  white-space:nowrap;
+}
+.ticker-inner span{
+  font-family:var(--font-display);
+  font-size:.78rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--void);
+  padding:0 2.5rem;
+  flex-shrink:0;
+}
+.ticker-dot{
+  display:inline-flex;align-items:center;
+  padding:0 .5rem;color:var(--primary-deep);
+}
+@keyframes ticker{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* ══════════════════════════════
+   USP STRIP
+══════════════════════════════ */
+#usps{
+  background:var(--base);
+  border-bottom:1px solid var(--border);
+  padding:3rem 0;
+}
+.usp-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+.usp-item{
+  padding:clamp(1.2rem,3vw,2rem);
+  display:flex;align-items:flex-start;gap:1rem;
+  border-right:1px solid var(--border);
+  transition:background var(--t-fast);
+}
+.usp-item:last-child{border-right:none;}
+.usp-item:hover{background:var(--layer);}
+.usp-icon{
+  width:40px;height:40px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--primary-glow);
+  border-radius:var(--r);
+  border:1px solid rgba(245,166,35,.15);
+}
+.usp-icon svg{width:20px;height:20px;fill:var(--primary);}
+.usp-body h4{
+  font-family:var(--font-display);
+  font-size:.9rem;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:.3rem;
+}
+.usp-body p{font-size:.82rem;color:var(--text-muted);line-height:1.5;}
+
+/* ══════════════════════════════
+   LEISTUNGEN
+══════════════════════════════ */
+#leistungen{
+  background:var(--void);
+  padding:clamp(4rem,8vw,8rem) 0;
+}
+.leistungen-header{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:3rem;flex-wrap:wrap;gap:1.5rem;
+}
+.leistungen-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:auto auto;
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:var(--r-l);
+  overflow:hidden;
+}
+.service-card{
+  background:var(--layer);
+  padding:clamp(1.5rem,3vw,2.4rem);
+  position:relative;overflow:hidden;
+  transition:background var(--t-mid) var(--ease);
+  display:flex;flex-direction:column;
+  gap:.8rem;
+}
+.service-card:hover{background:var(--layer-hover);}
+
+/* Top border sweep */
+.service-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--primary);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease);
+}
+.service-card:hover::before{transform:scaleX(1);}
+
+/* Feature card – large */
+.service-card.feature{
+  grid-column:1/3;
+  background:linear-gradient(135deg, var(--layer) 0%, #0F1820 100%);
+}
+.service-num{
+  font-family:var(--font-display);
+  font-size:3.5rem;font-weight:800;
+  color:var(--border-m);
+  line-height:1;position:absolute;top:1rem;right:1.5rem;
+  transition:color var(--t-mid);
+}
+.service-card:hover .service-num{color:rgba(245,166,35,.12);}
+.service-icon{
+  width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--primary-glow);
+  border-radius:var(--r);
+  border:1px solid rgba(245,166,35,.15);
+}
+.service-icon svg{width:22px;height:22px;fill:var(--primary);}
+.service-card h3{
+  font-family:var(--font-display);
+  font-size:1.1rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;
+}
+.service-card.feature h3{
+  font-size:1.5rem;
+  max-width:280px;
+}
+.service-card p{font-size:.87rem;color:var(--text-muted);line-height:1.6;}
+.service-tags{
+  display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;
+}
+.tag{
+  font-family:var(--font-display);
+  font-size:.65rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:.25rem .6rem;
+  border-radius:3px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--border);
+  color:var(--text-muted);
+  transition:background var(--t-fast),color var(--t-fast),border-color var(--t-fast);
+}
+.service-card:hover .tag{
+  background:rgba(245,166,35,.06);
+  border-color:rgba(245,166,35,.15);
+  color:rgba(245,166,35,.7);
+}
+.service-arrow{
+  position:absolute;bottom:1.5rem;right:1.5rem;
+  width:32px;height:32px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;
+  transition:opacity var(--t-fast),border-color var(--t-fast),background var(--t-fast);
+}
+.service-arrow svg{width:14px;height:14px;fill:var(--primary);}
+.service-card:hover .service-arrow{
+  opacity:1;border-color:rgba(245,166,35,.3);
+  background:rgba(245,166,35,.06);
+}
+
+/* ══════════════════════════════
+   ÜBER UNS
+══════════════════════════════ */
+#ueber-uns{
+  background:var(--base);
+  padding:clamp(4rem,8vw,8rem) 0;
+}
+.about-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(2rem,5vw,5rem);
+  align-items:center;
+}
+.about-photo{
+  position:relative;
+}
+.about-photo-frame{
+  width:100%;
+  aspect-ratio:4/5;
+  border-radius:var(--r-l);
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(145deg,#1A2230,#0C1420);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+}
+.about-photo-frame::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,8,10,.5) 0%,transparent 60%);
+}
+.about-photo-frame::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--primary),transparent 60%);
+  z-index:2;
+}
+.about-photo-svg{opacity:.08;}
+.about-stat-card{
+  position:absolute;bottom:-1.5rem;right:-1.5rem;
+  background:var(--primary);color:var(--void);
+  padding:1.2rem 1.5rem;
+  border-radius:var(--r);
+  font-family:var(--font-display);
+  box-shadow:0 16px 48px rgba(245,166,35,.3);
+  animation:floatBadge 6s ease-in-out infinite;
+}
+.about-stat-card .stat-big{font-size:2.5rem;font-weight:800;line-height:1;}
+.about-stat-card .stat-desc{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+
+.about-content{display:flex;flex-direction:column;gap:1.8rem;}
+.about-content p{font-size:.97rem;color:var(--text-muted);line-height:1.75;}
+.about-content p strong{color:var(--text-main);}
+.about-strengths{
+  display:flex;flex-direction:column;gap:1rem;
+  padding:1.5rem;
+  background:var(--layer);
+  border:1px solid var(--border);
+  border-radius:var(--r-l);
+  border-left:3px solid var(--primary);
+}
+.strength{display:flex;align-items:flex-start;gap:.8rem;}
+.strength-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--primary);flex-shrink:0;margin-top:.45rem;
+}
+.strength-text{font-size:.9rem;color:var(--text-muted);line-height:1.5;}
+.strength-text strong{color:var(--text-main);}
+.cert-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.5rem;}
+.cert-badge{
+  font-family:var(--font-display);
+  font-size:.68rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.4rem .9rem;
+  border:1px solid var(--border-m);
+  border-radius:3px;
+  color:var(--text-muted);
+  background:rgba(255,255,255,.02);
+}
+
+/* ══════════════════════════════
+   REFERENZEN
+══════════════════════════════ */
+#referenzen{
+  background:var(--void);
+  padding:clamp(4rem,8vw,8rem) 0;
+}
+.ref-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:var(--r-l);
+  overflow:hidden;
+  margin-top:3rem;
+}
+.ref-card{
+  aspect-ratio:4/3;
+  position:relative;overflow:hidden;
+  background:var(--layer);
+  display:flex;align-items:center;justify-content:center;
+}
+.ref-bg{
+  position:absolute;inset:0;
+  transition:transform .6s var(--ease);
+  display:flex;align-items:center;justify-content:center;
+}
+.ref-card:hover .ref-bg{transform:scale(1.05);}
+.ref-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,8,10,.92) 0%,rgba(6,8,10,.4) 60%,transparent 100%);
+  opacity:0;
+  transition:opacity var(--t-mid) var(--ease);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:1.5rem;
+}
+.ref-card:hover .ref-overlay{opacity:1;}
+.ref-cat{
+  font-family:var(--font-display);font-size:.65rem;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--primary);
+  margin-bottom:.4rem;
+}
+.ref-title{
+  font-family:var(--font-display);font-size:1rem;font-weight:700;
+  text-transform:uppercase;
+}
+.ref-meta{font-size:.75rem;color:var(--text-muted);margin-top:.2rem;}
+.ref-always{
+  position:absolute;bottom:1rem;left:1rem;
+  font-family:var(--font-display);font-size:.65rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);
+}
+.ref-cta{margin-top:2rem;display:flex;justify-content:center;}
+
+/* ══════════════════════════════
+   FÖRDERUNG / MEHRWERT
+══════════════════════════════ */
+#foerderung{
+  background:var(--base);
+  padding:clamp(4rem,8vw,8rem) 0;
+}
+.foerd-grid{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:clamp(2rem,5vw,5rem);
+  align-items:start;
+  margin-top:3rem;
+}
+.foerd-intro p{
+  font-size:.97rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.2rem;
+}
+.foerd-programs{
+  display:flex;flex-direction:column;gap:.8rem;
+}
+.program-card{
+  background:var(--layer);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  padding:1.2rem 1.4rem;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:1rem;align-items:center;
+  transition:border-color var(--t-fast),background var(--t-fast);
+  position:relative;overflow:hidden;
+}
+.program-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--primary);transform:scaleY(0);
+  transition:transform var(--t-mid) var(--ease);
+}
+.program-card:hover{
+  border-color:rgba(245,166,35,.2);
+  background:var(--layer-hover);
+}
+.program-card:hover::before{transform:scaleY(1);}
+.prog-icon{
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--primary-glow);
+  border-radius:var(--r);
+}
+.prog-icon svg{width:18px;height:18px;fill:var(--primary);}
+.prog-body h4{
+  font-family:var(--font-display);font-size:.85rem;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;margin-bottom:.2rem;
+}
+.prog-body p{font-size:.8rem;color:var(--text-muted);}
+.prog-badge{
+  font-family:var(--font-display);font-size:.75rem;font-weight:800;
+  color:var(--primary);white-space:nowrap;
+}
+
+/* ══════════════════════════════
+   PROZESS
+══════════════════════════════ */
+#prozess{
+  background:var(--void);
+  padding:clamp(4rem,8vw,8rem) 0;
+}
+.prozess-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  margin-top:3rem;
+  position:relative;
+}
+/* Connecting line */
+.prozess-grid::before{
+  content:'';
+  position:absolute;
+  top:2rem;left:12.5%;right:12.5%;
+  height:1px;
+  background:linear-gradient(90deg,var(--primary),var(--primary) 33%,var(--border-m) 33%);
+  background-size:33.33% 1px;
+  z-index:0;
+}
+.prozess-step{
+  padding:clamp(1.5rem,3vw,2.4rem) clamp(1rem,2vw,1.5rem);
+  position:relative;z-index:1;
+  text-align:center;
+}
+.prozess-num{
+  width:56px;height:56px;margin:0 auto 1.2rem;
+  border-radius:50%;
+  background:var(--layer);
+  border:1px solid var(--border-m);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:1.1rem;font-weight:800;
+  color:var(--primary);
+  position:relative;z-index:2;
+  transition:background var(--t-mid),border-color var(--t-mid),box-shadow var(--t-mid);
+}
+.prozess-step:hover .prozess-num{
+  background:var(--primary);color:var(--void);
+  border-color:var(--primary);
+  box-shadow:0 8px 24px rgba(245,166,35,.3);
+}
+.ghost-num{
+  position:absolute;
+  bottom:.5rem;right:1rem;
+  font-family:var(--font-display);
+  font-size:5rem;font-weight:800;
+  color:rgba(255,255,255,.025);
+  line-height:1;
+  pointer-events:none;
+  z-index:0;
+  user-select:none;
+}
+.prozess-step h3{
+  font-family:var(--font-display);font-size:1rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;
+}
+.prozess-step p{font-size:.85rem;color:var(--text-muted);line-height:1.5;}
+
+/* ══════════════════════════════
+   BEWERTUNGEN
+══════════════════════════════ */
+#bewertungen{
+  background:var(--base);
+  padding:clamp(4rem,8vw,8rem) 0;
+}
+.reviews-layout{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:3rem;
+  align-items:start;
+  margin-top:3rem;
+}
+.review-score-box{
+  background:var(--layer);
+  border:1px solid var(--border);
+  border-radius:var(--r-l);
+  padding:2rem;
+  text-align:center;
+  position:sticky;top:6rem;
+}
+.score-big{
+  font-family:var(--font-display);
+  font-size:5rem;font-weight:800;
+  color:var(--primary);line-height:1;
+}
+.score-stars{display:flex;justify-content:center;gap:.2rem;margin:.5rem 0;}
+.score-stars svg{width:18px;height:18px;fill:var(--primary);}
+.score-label{font-size:.8rem;color:var(--text-muted);}
+.score-bars{margin:1.5rem 0;display:flex;flex-direction:column;gap:.5rem;}
+.bar-row{display:grid;grid-template-columns:16px 1fr 28px;gap:.5rem;align-items:center;}
+.bar-label{font-family:var(--font-display);font-size:.72rem;color:var(--text-muted);}
+.bar-track{height:4px;background:var(--border-m);border-radius:2px;overflow:hidden;}
+.bar-fill{height:100%;background:var(--primary);border-radius:2px;}
+.bar-pct{font-family:var(--font-display);font-size:.68rem;color:var(--text-muted);}
+.google-badge{
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  padding:.6rem;border:1px solid var(--border);border-radius:var(--r);
+  font-family:var(--font-display);font-size:.72rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--text-muted);
+}
+.review-cards{display:flex;flex-direction:column;gap:1rem;}
+.review-card{
+  background:var(--layer);
+  border:1px solid var(--border);
+  border-radius:var(--r-l);
+  padding:1.5rem;
+  transition:border-color var(--t-fast),background var(--t-fast);
+  position:relative;
+}
+.review-card:hover{
+  border-color:rgba(245,166,35,.15);
+  background:var(--layer-hover);
+}
+.review-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;}
+.review-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--primary-deep));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:800;font-size:1.1rem;color:var(--void);
+  flex-shrink:0;
+}
+.review-meta h4{
+  font-family:var(--font-display);font-size:.9rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;
+}
+.review-meta .review-date{font-size:.75rem;color:var(--text-faint);}
+.review-stars{display:flex;gap:.15rem;}
+.review-stars svg{width:13px;height:13px;fill:var(--primary);}
+.review-text{font-size:.9rem;color:var(--text-muted);line-height:1.65;}
+.quote-mark{
+  position:absolute;top:1rem;right:1.5rem;
+  font-family:var(--font-display);font-size:4rem;
+  color:rgba(245,166,35,.08);line-height:1;
+  pointer-events:none;
+}
+
+/* ══════════════════════════════
+   EINSATZGEBIET
+══════════════════════════════ */
+#einsatzgebiet{
+  background:var(--void);
+  padding:clamp(4rem,8vw,8rem) 0;
+}
+.gebiet-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(2rem,5vw,4rem);
+  align-items:center;
+  margin-top:3rem;
+}
+.gebiet-text p{
+  font-size:.97rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.2rem;
+}
+.city-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+.city-tag{
+  font-family:var(--font-display);
+  font-size:.72rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:.4rem .8rem;
+  border:1px solid var(--border-m);
+  border-radius:3px;
+  color:var(--text-muted);
+  background:rgba(255,255,255,.02);
+  transition:all var(--t-fast);
+}
+.city-tag:hover,.city-tag.primary{
+  background:rgba(245,166,35,.08);
+  border-color:rgba(245,166,35,.25);
+  color:var(--primary);
+}
+/* Radar visual */
+.radar-visual{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  aspect-ratio:1;
+}
+.radar-ring{
+  position:absolute;border-radius:50%;border:1px solid;
+  animation:radarPulse 3s ease-in-out infinite;
+}
+.radar-ring:nth-child(1){width:80%;height:80%;border-color:rgba(245,166,35,.15);}
+.radar-ring:nth-child(2){width:55%;height:55%;border-color:rgba(245,166,35,.25);animation-delay:.5s;}
+.radar-ring:nth-child(3){width:30%;height:30%;border-color:rgba(245,166,35,.4);animation-delay:1s;}
+.radar-center{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--primary);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:2;
+  box-shadow:0 0 0 8px rgba(245,166,35,.15),0 0 0 20px rgba(245,166,35,.06);
+  animation:floatBadge 4s ease-in-out infinite;
+}
+.radar-center svg{width:22px;height:22px;fill:var(--void);}
+.radar-sweep{
+  position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 0deg,rgba(245,166,35,.15) 0%,transparent 30%);
+  animation:sweep 4s linear infinite;
+}
+@keyframes sweep{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes radarPulse{
+  0%,100%{opacity:.5;}50%{opacity:1;}
+}
+
+/* ══════════════════════════════
+   FAQ
+══════════════════════════════ */
+#faq{
+  background:var(--base);
+  padding:clamp(4rem,8vw,8rem) 0;
+}
+.faq-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:var(--r-l);
+  overflow:hidden;
+  margin-top:3rem;
+}
+.faq-item{
+  background:var(--layer);
+  border-bottom:1px solid var(--border);
+}
+.faq-item:nth-last-child(-n+2){border-bottom:none;}
+.faq-trigger{
+  width:100%;
+  padding:1.3rem 1.5rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  text-align:left;
+  font-family:var(--font-display);font-size:.9rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;
+  color:var(--text-main);
+  transition:background var(--t-fast),color var(--t-fast);
+}
+.faq-trigger:hover{background:var(--layer-hover);color:var(--primary);}
+.faq-trigger.active{color:var(--primary);}
+.faq-icon{
+  width:24px;height:24px;flex-shrink:0;
+  border:1px solid var(--border-m);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;color:var(--text-muted);
+  transition:transform .3s var(--ease),background var(--t-fast),border-color var(--t-fast);
+}
+.faq-trigger.active .faq-icon{
+  transform:rotate(45deg);
+  background:var(--primary-glow);
+  border-color:rgba(245,166,35,.3);
+  color:var(--primary);
+}
+.faq-body{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s var(--ease),padding .4s var(--ease);
+}
+.faq-body-inner{
+  padding:0 1.5rem 1.3rem;
+  font-size:.9rem;color:var(--text-muted);line-height:1.65;
+}
+
+/* ══════════════════════════════
+   CTA BAND
+══════════════════════════════ */
+#cta-band{
+  position:relative;overflow:hidden;
+  padding:clamp(4rem,8vw,7rem) 0;
+  background:var(--void);
+}
+.cta-band-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,
+    rgba(245,166,35,.08) 0%,
+    rgba(245,166,35,.03) 50%,
+    transparent 100%);
+}
+.cta-band-line{
+  position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--primary),transparent);
+}
+.cta-band-content{
+  position:relative;z-index:2;
+  text-align:center;
+  max-width:700px;margin:0 auto;
+}
+.cta-band-content .display-l{margin-bottom:1rem;}
+.cta-band-content p{
+  font-size:1.05rem;color:var(--text-muted);margin-bottom:2.5rem;
+}
+.cta-band-actions{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;
+}
+
+/* ══════════════════════════════
+   KONTAKT
+══════════════════════════════ */
+#kontakt{
+  background:var(--base);
+  padding:clamp(4rem,8vw,8rem) 0;
+}
+.kontakt-split{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:clamp(2rem,5vw,5rem);
+}
+.kontakt-info{display:flex;flex-direction:column;gap:2rem;}
+.kontakt-heading{
+  font-family:var(--font-display);font-size:1.1rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;
+  color:var(--primary);margin-bottom:1rem;
+}
+.kontakt-item{
+  display:flex;align-items:flex-start;gap:1rem;
+}
+.k-icon{
+  width:40px;height:40px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--primary-glow);
+  border-radius:var(--r);border:1px solid rgba(245,166,35,.15);
+}
+.k-icon svg{width:18px;height:18px;fill:var(--primary);}
+.k-text{display:flex;flex-direction:column;gap:.2rem;}
+.k-label{
+  font-family:var(--font-display);font-size:.7rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);
+}
+.k-val{font-size:.97rem;color:var(--text-main);}
+.k-val a{transition:color var(--t-fast);}
+.k-val a:hover{color:var(--primary);}
+.oeffnungszeiten{
+  background:var(--layer);border:1px solid var(--border);
+  border-radius:var(--r-l);padding:1.3rem;
+  display:flex;flex-direction:column;gap:.6rem;
+}
+.oz-row{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:.88rem;
+}
+.oz-day{color:var(--text-muted);font-family:var(--font-display);font-size:.8rem;
+  letter-spacing:.06em;text-transform:uppercase;}
+.oz-time{color:var(--text-main);}
+.oz-row.today .oz-day,.oz-row.today .oz-time{color:var(--primary);}
+.notdienst-note{
+  background:rgba(245,166,35,.06);
+  border:1px solid rgba(245,166,35,.15);
+  border-radius:var(--r);
+  padding:.8rem 1rem;
+  font-size:.82rem;color:var(--primary);
+  font-family:var(--font-display);
+  letter-spacing:.04em;
+}
+
+/* FORM */
+.kontakt-form-wrap{
+  background:var(--layer);
+  border:1px solid var(--border);
+  border-radius:var(--r-l);
+  padding:clamp(1.5rem,4vw,2.5rem);
+}
+.form-title{
+  font-family:var(--font-display);font-size:1rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;margin-bottom:1.5rem;
+}
+.form-grid{display:flex;flex-direction:column;gap:1rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-group{display:flex;flex-direction:column;gap:.4rem;}
+.form-label{
+  font-family:var(--font-display);font-size:.7rem;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);
+}
+.form-label .req{color:var(--primary);}
+.form-input,.form-select,.form-textarea{
+  background:var(--void);
+  border:1px solid var(--border-m);
+  border-radius:var(--r);
+  padding:.8rem 1rem;
+  color:var(--text-main);
+  font-family:var(--font-body);font-size:.93rem;
+  transition:border-color var(--t-fast),box-shadow var(--t-fast);
+  -webkit-appearance:none;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{
+  outline:none;
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px var(--primary-glow);
+}
+.form-select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A8F9A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 1rem center;
+  padding-right:2.5rem;cursor:none;
+}
+.form-select option{background:var(--layer);}
+.form-textarea{min-height:110px;resize:vertical;}
+.form-privacy{font-size:.77rem;color:var(--text-faint);line-height:1.5;}
+.form-privacy a{color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;}
+.btn-submit{
+  width:100%;
+  background:var(--primary);color:var(--void);
+  padding:1rem;
+  font-family:var(--font-display);font-size:.88rem;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;
+  border-radius:var(--r);
+  position:relative;overflow:hidden;
+  transition:all var(--t-mid) var(--ease);
+}
+.btn-submit::before{
+  content:'';position:absolute;inset:0;
+  background:var(--primary-hover);
+  transform:translateX(-100%);transition:transform .4s var(--ease);
+}
+.btn-submit:hover::before{transform:translateX(0);}
+.btn-submit:hover{box-shadow:0 12px 40px rgba(245,166,35,.4);}
+.btn-submit span{position:relative;z-index:1;}
+.btn-submit:disabled{opacity:.5;pointer-events:none;}
+.btn-submit.sent{background:var(--secondary);}
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+#footer{
+  background:var(--void);
+  border-top:1px solid var(--border);
+  padding:clamp(3rem,6vw,5rem) 0 0;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:clamp(1.5rem,4vw,3rem);
+  margin-bottom:3rem;
+}
+.footer-brand{}
+.footer-logo-mark{
+  font-family:var(--font-display);font-size:1.3rem;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;margin-bottom:.4rem;
+}
+.footer-logo-mark span{color:var(--primary);}
+.footer-brand p{
+  font-size:.85rem;color:var(--text-muted);line-height:1.6;margin-bottom:1.2rem;
+}
+.footer-col h5{
+  font-family:var(--font-display);font-size:.72rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-faint);margin-bottom:.9rem;
+}
+.footer-col ul{display:flex;flex-direction:column;gap:.5rem;}
+.footer-col ul li a{
+  font-size:.88rem;color:var(--text-muted);
+  transition:color var(--t-fast);
+}
+.footer-col ul li a:hover{color:var(--primary);}
+.footer-contact-item{
+  display:flex;align-items:center;gap:.6rem;
+  font-size:.85rem;color:var(--text-muted);margin-bottom:.5rem;
+}
+.footer-contact-item svg{width:14px;height:14px;fill:var(--primary);flex-shrink:0;}
+.footer-contact-item a:hover{color:var(--primary);}
+.footer-cert-badges{
+  display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;
+}
+.footer-cert{
+  font-family:var(--font-display);font-size:.62rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:.3rem .7rem;border:1px solid var(--border-m);
+  border-radius:3px;color:var(--text-faint);
+}
+.footer-bottom{
+  border-top:1px solid var(--border);
+  padding:1.2rem 0;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:.8rem;
+}
+.footer-copy{font-size:.78rem;color:var(--text-faint);}
+.footer-legal{display:flex;gap:1.5rem;}
+.footer-legal a{
+  font-size:.78rem;color:var(--text-faint);
+  transition:color var(--t-fast);
+}
+.footer-legal a:hover{color:var(--text-muted);}
+
+/* ══════════════════════════════
+   FLOATING PHONE BUTTON (Mobile)
+══════════════════════════════ */
+.float-call{
+  position:fixed;bottom:1.5rem;right:1.5rem;z-index:900;
+  display:none;
+  background:var(--primary);
+  color:var(--void);
+  width:56px;height:56px;border-radius:50%;
+  align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(245,166,35,.4);
+  animation:phonePulse 3s ease-in-out infinite;
+}
+.float-call svg{width:22px;height:22px;fill:var(--void);}
+@keyframes phonePulse{
+  0%,100%{box-shadow:0 4px 20px rgba(245,166,35,.4);}
+  50%{box-shadow:0 4px 40px rgba(245,166,35,.6),0 0 0 12px rgba(245,166,35,.1);}
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media(max-width:1200px){
+  .leistungen-grid{grid-template-columns:repeat(2,1fr);}
+  .service-card.feature{grid-column:1/-1;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:1100px){
+  #hero{grid-template-columns:1fr;}
+  .stats-bar{grid-column:1;}
+  .hero-visual{display:none;}
+  .hero-content{padding:clamp(6rem,10vw,8rem) clamp(1.2rem,5vw,5rem) 3rem;}
+}
+@media(max-width:860px){
+  .nav-links,.nav-phone{display:none;}
+  .hamburger{display:flex;}
+  .usp-grid{grid-template-columns:repeat(2,1fr);}
+  .usp-item:nth-child(2){border-right:none;}
+  .usp-item:nth-child(3){border-top:1px solid var(--border);border-right:1px solid var(--border);}
+  .usp-item:nth-child(4){border-top:1px solid var(--border);border-right:none;}
+  .about-split,.kontakt-split,.gebiet-split,.foerd-grid{grid-template-columns:1fr;}
+  .about-stat-card{right:.5rem;bottom:.5rem;}
+  .reviews-layout{grid-template-columns:1fr;}
+  .review-score-box{position:static;}
+  .ref-grid{grid-template-columns:repeat(2,1fr);}
+  .prozess-grid{grid-template-columns:repeat(2,1fr);}
+  .prozess-grid::before{display:none;}
+  .faq-grid{grid-template-columns:1fr;}
+  .faq-item:nth-last-child(-n+2){border-bottom:1px solid var(--border);}
+  .faq-item:last-child{border-bottom:none;}
+  .stats-bar{grid-template-columns:repeat(2,1fr);}
+  .stat-item:nth-child(2){border-right:none;}
+  .stat-item:nth-child(3){border-top:1px solid var(--border);}
+  .float-call{display:flex;}
+  body{cursor:auto;}
+  #cursor-dot,#cursor-ring{display:none;}
+}
+@media(max-width:600px){
+  .leistungen-grid{grid-template-columns:1fr;}
+  .service-card.feature{grid-column:1;}
+  .ref-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .stats-bar{grid-template-columns:1fr 1fr;}
+  .hero-trust{gap:1rem;}
+  .trust-divider{display:none;}
+  .hero-actions{flex-direction:column;align-items:flex-start;}
+  .hero-actions .btn{width:100%;justify-content:center;}
+}
+@media(hover:none){
+  #cursor-dot,#cursor-ring{display:none;}
+  body{cursor:auto;}
+  button{cursor:pointer;}
+  a{cursor:pointer;}
+}
+
+/* ══════════════════════════════
+   UTILITY
+══════════════════════════════ */
+.text-primary{color:var(--primary);}
+.mb-1{margin-bottom:.5rem;}
+.mb-2{margin-bottom:1rem;}
+.mb-3{margin-bottom:1.5rem;}
+.gap-row{display:flex;align-items:center;gap:.8rem;}
+</style>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor-dot" role="presentation"></div>
+<div id="cursor-ring" role="presentation"></div>
+
+<!-- Mobile Drawer -->
+<nav class="nav-drawer" id="drawer" role="navigation" aria-label="Mobile Navigation">
+  <a href="#leistungen" onclick="closeDrawer()">Leistungen</a>
+  <a href="#ueber-uns" onclick="closeDrawer()">Über uns</a>
+  <a href="#referenzen" onclick="closeDrawer()">Referenzen</a>
+  <a href="#bewertungen" onclick="closeDrawer()">Bewertungen</a>
+  <a href="#kontakt" onclick="closeDrawer()">Kontakt</a>
+  <a href="tel:07042120734" class="drawer-phone">📞 07042 / 120734</a>
+</nav>
+
+<!-- ══════════════════════════════
+     NAVIGATION
+══════════════════════════════ -->
+<header id="nav" role="banner">
+  <a href="/" class="nav-logo" aria-label="Elektro ESW – Startseite">
+    <span class="nav-logo-mark">Elektro <span>ESW</span></span>
+    <span class="nav-logo-sub">Elektro-Service Wolfgang · Vaihingen (Enz)</span>
+  </a>
+  <nav class="nav-links" role="navigation" aria-label="Hauptnavigation">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#referenzen">Referenzen</a>
+    <a href="#bewertungen">Bewertungen</a>
+    <a href="#einsatzgebiet">Einsatzgebiet</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="tel:07042120734" class="nav-phone" aria-label="Büro anrufen">07042 / 120734</a>
+    <a href="#kontakt" class="btn btn-primary" style="padding:.65rem 1.3rem;font-size:.78rem;" aria-label="Kostenloses Angebot anfragen">Angebot anfragen →</a>
+    <button class="hamburger" id="burger" aria-label="Menü öffnen" onclick="toggleDrawer()" style="cursor:none;">
+      <span id="b1"></span>
+      <span id="b2"></span>
+      <span id="b3"></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══════════════════════════════
+     HERO
+══════════════════════════════ -->
+<main>
+<section id="hero">
+  <div class="hero-content">
+    <div class="eyebrow hero-eyebrow">
+      Vaihingen an der Enz &nbsp;·&nbsp; Inhabergeführter Elektrobetrieb
+    </div>
+
+    <h1 class="display-xl hero-h1">
+      Ihr Elektriker<br>
+      <span class="line-accent">in Vaihingen</span><br>
+      <span class="line-light">– der wirklich kommt.</span>
+    </h1>
+
+    <p class="body-l hero-sub">
+      Elektroinstallation, Smart-Home-Lösungen und PV-Anschlüsse aus einer Hand.
+      <strong style="color:var(--text-main);">Wolfgang</strong> – Fachmann mit über 25 Jahren Erfahrung im Enzkreis –
+      kümmert sich persönlich um Ihr Anliegen. Kein Callcenter. Keine leeren Versprechen.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#kontakt" class="btn btn-primary" aria-label="Kostenloses Angebot anfordern">
+        Kostenloses Angebot anfordern →
+      </a>
+      <a href="tel:07042120734" class="btn btn-outline" aria-label="Jetzt anrufen">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Jetzt anrufen
+      </a>
+    </div>
+    <p class="micro-copy">Kostenlos · Unverbindlich · Antwort innerhalb von 24 Stunden</p>
+
+    <div class="hero-trust">
+      <div class="trust-item">
+        <span class="trust-val">4,5★</span>
+        <span class="trust-label">Google Rating</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-val">25+</span>
+        <span class="trust-label">Jahre Erfahrung</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-val">500+</span>
+        <span class="trust-label">Projekte</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-val">48h</span>
+        <span class="trust-label">Angebot in 48h</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-photo-frame">
+      <div class="hero-photo-bg">
+        <!-- 📸 Profi-Foto: Wolfgang bei der Arbeit / modernes Elektropanel / Baustelle -->
+        <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" class="hero-photo-svg" aria-hidden="true">
+          <rect x="30" y="60" width="220" height="160" rx="8" stroke="#F5A623" stroke-width="2" fill="none"/>
+          <rect x="50" y="80" width="60" height="40" rx="4" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+          <rect x="50" y="130" width="60" height="40" rx="4" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+          <rect x="130" y="80" width="100" height="90" rx="4" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+          <line x1="140" y1="40" x2="140" y2="60" stroke="#F5A623" stroke-width="2"/>
+          <line x1="100" y1="40" x2="180" y2="40" stroke="#F5A623" stroke-width="1.5"/>
+          <circle cx="70" cy="170" r="8" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+          <line x1="70" y1="162" x2="70" y2="158"/>
+          <circle cx="100" cy="170" r="8" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+          <line x1="140" y1="220" x2="140" y2="240" stroke="#F5A623" stroke-width="2"/>
+          <path d="M130 240 Q140 250 150 240" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+          <path d="M60 100 L70 90 L80 100" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <div class="hero-photo-label">Elektro-Service Wolfgang · Vaihingen (Enz)</div>
+    </div>
+
+    <div class="hero-badge" aria-label="Festpreisgarantie">
+      ✓ Fest&shy;preis<br>garantie<br><span style="font-size:.6rem;opacity:.7">Kein Überraschungen</span>
+    </div>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar" role="complementary" aria-label="Kennzahlen">
+    <div class="stat-item" data-reveal="up" data-delay="1">
+      <span class="stat-num">25+</span>
+      <span class="stat-txt">Jahre im Enzkreis</span>
+    </div>
+    <div class="stat-item" data-reveal="up" data-delay="2">
+      <span class="stat-num">500+</span>
+      <span class="stat-txt">Abgeschlossene Projekte</span>
+    </div>
+    <div class="stat-item" data-reveal="up" data-delay="3">
+      <span class="stat-num">48h</span>
+      <span class="stat-txt">Angebot innerhalb 48h</span>
+    </div>
+    <div class="stat-item" data-reveal="up" data-delay="4">
+      <span class="stat-num">100%</span>
+      <span class="stat-txt">Inhabergeführt & persönlich</span>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scrollen</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     URGENCY TICKER
+══════════════════════════════ -->
+<div id="ticker" role="marquee" aria-label="Aktuelle Infos">
+  <div class="ticker-inner">
+    <span>⚡ Elektriker Vaihingen Enz</span><span class="ticker-dot">—</span>
+    <span>Festpreis-Angebot in 48h</span><span class="ticker-dot">—</span>
+    <span>Smart Home Installation</span><span class="ticker-dot">—</span>
+    <span>PV-Anlage &amp; E-Mobilität</span><span class="ticker-dot">—</span>
+    <span>Festpreise · Keine versteckten Kosten</span><span class="ticker-dot">—</span>
+    <span>Meisterbetrieb Enzkreis</span><span class="ticker-dot">—</span>
+    <span>Elektroinstallation Vaihingen</span><span class="ticker-dot">—</span>
+    <span>KfW-Förderung · BAFA-Antrag</span><span class="ticker-dot">—</span>
+    <!-- Dupliziert für nahtlosen Loop -->
+    <span>⚡ Elektriker Vaihingen Enz</span><span class="ticker-dot">—</span>
+    <span>Festpreis-Angebot in 48h</span><span class="ticker-dot">—</span>
+    <span>Smart Home Installation</span><span class="ticker-dot">—</span>
+    <span>PV-Anlage &amp; E-Mobilität</span><span class="ticker-dot">—</span>
+    <span>Festpreise · Keine versteckten Kosten</span><span class="ticker-dot">—</span>
+    <span>Meisterbetrieb Enzkreis</span><span class="ticker-dot">—</span>
+    <span>Elektroinstallation Vaihingen</span><span class="ticker-dot">—</span>
+    <span>KfW-Förderung · BAFA-Antrag</span><span class="ticker-dot">—</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     USP STRIP
+══════════════════════════════ -->
+<section id="usps" aria-labelledby="usps-label">
+  <div class="usp-grid">
+    <div class="usp-item" data-reveal="up" data-delay="1">
+      <div class="usp-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <div class="usp-body">
+        <h4>Geprüfte Sicherheit</h4>
+        <p>Alle Arbeiten VDE-normgerecht ausgeführt. Schriftliche Abnahme und Dokumentation inklusive.</p>
+      </div>
+    </div>
+    <div class="usp-item" data-reveal="up" data-delay="2">
+      <div class="usp-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <div class="usp-body">
+        <h4>Pünktlich. Immer.</h4>
+        <p>Feste Terminzusagen die gelten. Kein stundenlages Warten – Wolfgang kommt wann er sagt.</p>
+      </div>
+    </div>
+    <div class="usp-item" data-reveal="up" data-delay="3">
+      <div class="usp-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"/></svg>
+      </div>
+      <div class="usp-body">
+        <h4>Transparente Preise</h4>
+        <p>Kostenvoranschlag vor Beginn. Keine Überraschungen auf der Rechnung. Faire Festpreise.</p>
+      </div>
+    </div>
+    <div class="usp-item" data-reveal="up" data-delay="4">
+      <div class="usp-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+      </div>
+      <div class="usp-body">
+        <h4>5-Sterne-Qualität</h4>
+        <p>Ausschließlich Qualitätsmaterial. 2 Jahre Gewährleistung auf alle Leistungen. Handarbeit die hält.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     LEISTUNGEN
+══════════════════════════════ -->
+<section id="leistungen" class="section-pad" aria-labelledby="leistungen-h2">
+  <div class="container">
+    <div class="leistungen-header">
+      <div>
+        <div class="eyebrow mb-2" data-reveal="up">Leistungen</div>
+        <h2 id="leistungen-h2" class="display-l" data-reveal="up" data-delay="1">
+          Was wir für Sie<br>
+          <span class="text-primary">in Vaihingen</span> tun
+        </h2>
+      </div>
+      <a href="#kontakt" class="btn btn-outline" data-reveal="up" data-delay="2" aria-label="Alle Leistungen anfragen">
+        Alle Leistungen anfragen →
+      </a>
+    </div>
+
+    <div class="leistungen-grid">
+      <!-- Feature Card -->
+      <div class="service-card feature" data-reveal="up">
+        <span class="service-num" aria-hidden="true">01</span>
+        <div class="service-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3>Elektroinstallation &amp; Neuinstallation in Vaihingen (Enz)</h3>
+        <p>Vom Einfamilienhaus bis zum Gewerbeobjekt: Wir planen und realisieren komplette Elektroinstallationen – sauber verlegt, normgerecht dokumentiert, termingerecht fertig. Kein Projekt zu groß, kein Detail zu klein.</p>
+        <div class="service-tags">
+          <span class="tag">Elektroinstallation Vaihingen</span>
+          <span class="tag">Neuinstallation Enzkreis</span>
+          <span class="tag">Unterverteilung</span>
+          <span class="tag">Leitungsverlegung</span>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+
+      <div class="service-card" data-reveal="up" data-delay="1">
+        <span class="service-num" aria-hidden="true">02</span>
+        <div class="service-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1M4.22 4.22l.71.71m12.73 12.73l.71.71M3 12h1m16 0h1M4.93 19.07l.71-.71M18.36 5.64l.71-.71M9 12a3 3 0 106 0 3 3 0 00-6 0z"/></svg>
+        </div>
+        <h3>Smart Home &amp; Gebäudeautomation</h3>
+        <p>Licht, Heizung und Sicherheit intelligent steuern. Wir installieren smarte Systeme die zum Alltag passen – kabelgebunden zuverlässig oder nachrüstbar per Funk.</p>
+        <div class="service-tags">
+          <span class="tag">Smart Home Vaihingen</span>
+          <span class="tag">KNX</span>
+          <span class="tag">Smarte Beleuchtung</span>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+
+      <div class="service-card" data-reveal="up" data-delay="2">
+        <span class="service-num" aria-hidden="true">03</span>
+        <div class="service-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </div>
+        <h3>Photovoltaik &amp; Speicher</h3>
+        <p>Elektrischer Anschluss Ihrer PV-Anlage inkl. Wechselrichter, Speicher und Einspeisung. Wir arbeiten mit allen gängigen Herstellern und kennen die Förderanträge im Schlaf.</p>
+        <div class="service-tags">
+          <span class="tag">PV Anlage Vaihingen</span>
+          <span class="tag">Batteriespeicher</span>
+          <span class="tag">Einspeisezähler</span>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+
+      <div class="service-card" data-reveal="up" data-delay="1">
+        <span class="service-num" aria-hidden="true">04</span>
+        <div class="service-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+        </div>
+        <h3>E-Mobilität &amp; Wallbox</h3>
+        <p>Wallbox-Installation nach aktueller Norm. Zählerkonzept, Netzanmeldung, KfW-fähige Ausführung. Laden Sie Ihr E-Auto zuhause schnell und sicher.</p>
+        <div class="service-tags">
+          <span class="tag">Wallbox Vaihingen Enz</span>
+          <span class="tag">KfW 442</span>
+          <span class="tag">11kW / 22kW</span>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+
+      <div class="service-card" data-reveal="up" data-delay="2">
+        <span class="service-num" aria-hidden="true">05</span>
+        <div class="service-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3>Beleuchtungsplanung &amp; LED-Umrüstung</h3>
+        <p>Von der Lichtplanung bis zur fertigen Installation. Wir rüsten Ihr Zuhause oder Büro auf moderne LED um – energieeffizient, stimmungsvoll, dimmbar.</p>
+        <div class="service-tags">
+          <span class="tag">LED Beleuchtung Vaihingen</span>
+          <span class="tag">Lichtplanung</span>
+          <span class="tag">Energiesparen</span>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+
+      <div class="service-card" data-reveal="up" data-delay="3">
+        <span class="service-num" aria-hidden="true">06</span>
+        <div class="service-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Komplettbetreuung für Privat &amp; Gewerbe</h3>
+        <p>Sie bauen, sanieren oder erweitern? Wir begleiten Ihr Projekt von der Planung bis zur Abnahme. Alles aus einer Hand, ein Ansprechpartner, volle Verantwortung.</p>
+        <div class="service-tags">
+          <span class="tag">Elektro Vaihingen Gewerbe</span>
+          <span class="tag">Neubau Elektrik</span>
+          <span class="tag">Sanierung</span>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     ÜBER UNS
+══════════════════════════════ -->
+<section id="ueber-uns" class="section-pad" aria-labelledby="about-h2">
+  <div class="container">
+    <div class="about-split">
+      <div class="about-photo" data-reveal="left">
+        <div class="about-photo-frame">
+          <!-- 📸 Proträtfoto Wolfgang / Team-Foto im Arbeitsumfeld -->
+          <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="about-photo-svg" aria-hidden="true">
+            <circle cx="100" cy="100" r="90" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+            <circle cx="100" cy="80" r="28" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+            <path d="M48 168 Q48 130 100 130 Q152 130 152 168" stroke="#F5A623" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <div class="about-stat-card" aria-label="Über 25 Jahre Erfahrung im Enzkreis">
+          <div class="stat-big">25+</div>
+          <div class="stat-desc">Jahre Erfahrung<br>im Enzkreis</div>
+        </div>
+      </div>
+
+      <div class="about-content" data-reveal="right">
+        <div class="eyebrow">Über uns</div>
+        <h2 id="about-h2" class="display-m">
+          Kein Konzern.<br>
+          <span class="text-primary">Ein Mensch.</span><br>
+          Ihre Elektrik.
+        </h2>
+        <p>
+          Mein Name ist Wolfgang – und ich bin seit über 25 Jahren Elektriker in Vaihingen an der Enz.
+          Was ich mache, mache ich selbst. <strong>Kein anonymes Unternehmen</strong>, das Subunternehmer
+          schickt. Wenn Sie anrufen, sprechen Sie mit mir. Wenn ich komme, stehe ich persönlich für die
+          Qualität meiner Arbeit.
+        </p>
+        <p>
+          Den Betrieb habe ich aufgebaut, weil ich genug davon hatte zu sehen, wie Elektroarbeiten
+          im Enzkreis oft erledigt werden: hastig, undokumentiert, ohne Rücksicht auf die Sicherheit
+          der Familie. Das mache ich anders. <strong>Jede Installation wird so ausgeführt,
+          als wäre es mein eigenes Haus.</strong>
+        </p>
+
+        <div class="about-strengths">
+          <div class="strength">
+            <div class="strength-dot"></div>
+            <p class="strength-text"><strong>Persönliche Verantwortung:</strong> Ich gebe meinen Namen auf jede Arbeit – deshalb ist Pfusch für mich keine Option.</p>
+          </div>
+          <div class="strength">
+            <div class="strength-dot"></div>
+            <p class="strength-text"><strong>Lokale Verwurzelung:</strong> Ich kenne die Besonderheiten alter Elektroinstallationen im Enzkreis – das spart Zeit und verhindert Überraschungen.</p>
+          </div>
+          <div class="strength">
+            <div class="strength-dot"></div>
+            <p class="strength-text"><strong>Direktkommunikation:</strong> Kein Ticketsystem, kein Callcenter. Sie haben meine Handynummer – 0160 / 7846022.</p>
+          </div>
+        </div>
+
+        <div class="cert-badges">
+          <span class="cert-badge">Inhabergeführt</span>
+          <span class="cert-badge">VDE-Normgerecht</span>
+          <span class="cert-badge">Haftpflichtversichert</span>
+          <span class="cert-badge">Enzkreis & Umgebung</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     REFERENZEN
+══════════════════════════════ -->
+<section id="referenzen" class="section-pad" aria-labelledby="ref-h2">
+  <div class="container">
+    <div class="eyebrow mb-2" data-reveal="up">Referenzen</div>
+    <h2 id="ref-h2" class="display-l" data-reveal="up" data-delay="1">
+      Projekte die<br>
+      <span class="text-primary">für sich sprechen</span>
+    </h2>
+
+    <div class="ref-grid">
+      <div class="ref-card" data-reveal="scale" data-delay="1">
+        <div class="ref-bg" style="background:linear-gradient(135deg,#1A2F20,#0C1810);">
+          <!-- 📸 Foto: PV-Anlagenanschluss / Zählerkasten Neubau -->
+        </div>
+        <div class="ref-overlay">
+          <div class="ref-cat">Photovoltaik</div>
+          <div class="ref-title">PV-Anlage 12kWp mit Speicher</div>
+          <div class="ref-meta">Vaihingen (Enz) · 2024</div>
+        </div>
+        <div class="ref-always">EFH · 12kWp + 10kWh Speicher</div>
+      </div>
+
+      <div class="ref-card" data-reveal="scale" data-delay="2">
+        <div class="ref-bg" style="background:linear-gradient(135deg,#1A1A2F,#0C0C18);">
+          <!-- 📸 Foto: Smart Home Steuerung / Schaltertableau -->
+        </div>
+        <div class="ref-overlay">
+          <div class="ref-cat">Smart Home</div>
+          <div class="ref-title">KNX Komplettsystem Neubau</div>
+          <div class="ref-meta">Sachsenheim · 2023</div>
+        </div>
+        <div class="ref-always">EFH · KNX-Bus · Licht + Heizung + Beschattung</div>
+      </div>
+
+      <div class="ref-card" data-reveal="scale" data-delay="3">
+        <div class="ref-bg" style="background:linear-gradient(135deg,#2F1A0C,#180C06);">
+          <!-- 📸 Foto: Wallbox in Garage -->
+        </div>
+        <div class="ref-overlay">
+          <div class="ref-cat">E-Mobilität</div>
+          <div class="ref-title">Wallbox 22kW mit Lastmanagement</div>
+          <div class="ref-meta">Mühlacker · 2024</div>
+        </div>
+        <div class="ref-always">Doppelgarage · 2× 11kW · KfW gefördert</div>
+      </div>
+
+      <div class="ref-card" data-reveal="scale" data-delay="2">
+        <div class="ref-bg" style="background:linear-gradient(135deg,#0C1A2F,#060C18);">
+          <!-- 📸 Foto: Unterverteiler / Sicherungskasten modern -->
+        </div>
+        <div class="ref-overlay">
+          <div class="ref-cat">Sanierung</div>
+          <div class="ref-title">Komplettsanierung Elektrik 70er-Bau</div>
+          <div class="ref-meta">Bietigheim-Bissingen · 2023</div>
+        </div>
+        <div class="ref-always">DHH · Vollsanierung Altbau · 180m²</div>
+      </div>
+
+      <div class="ref-card" data-reveal="scale" data-delay="3">
+        <div class="ref-bg" style="background:linear-gradient(135deg,#1A2A1A,#0A160A);">
+          <!-- 📸 Foto: Gewerbe-Installation / Büro -->
+        </div>
+        <div class="ref-overlay">
+          <div class="ref-cat">Gewerbe</div>
+          <div class="ref-title">Bürogebäude Elektroinstallation</div>
+          <div class="ref-meta">Vaihingen (Enz) · 2022</div>
+        </div>
+        <div class="ref-always">Neubau Gewerbe · 350m² Bürofläche</div>
+      </div>
+
+      <div class="ref-card" data-reveal="scale" data-delay="4">
+        <div class="ref-bg" style="background:linear-gradient(135deg,#2A1A1A,#160A0A);">
+          <!-- 📸 Foto: Außenbeleuchtung / Gartenbeleuchtung -->
+        </div>
+        <div class="ref-overlay">
+          <div class="ref-cat">Beleuchtung</div>
+          <div class="ref-title">Außen- &amp; Gartenbeleuchtung Smart</div>
+          <div class="ref-meta">Ensingen · 2024</div>
+        </div>
+        <div class="ref-always">EFH · Dimmbar · App-gesteuert</div>
+      </div>
+    </div>
+
+    <div class="ref-cta" data-reveal="up">
+      <a href="#kontakt" class="btn btn-primary" aria-label="Ähnliches Projekt anfragen">
+        Ähnliches Projekt anfragen →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FÖRDERUNG & MEHRWERT
+══════════════════════════════ -->
+<section id="foerderung" class="section-pad" aria-labelledby="foerd-h2">
+  <div class="container">
+    <div class="eyebrow mb-2" data-reveal="up">Staatliche Förderung</div>
+    <h2 id="foerd-h2" class="display-l" data-reveal="up" data-delay="1">
+      Bis zu <span class="text-primary">9.000 €</span><br>
+      Förderung sichern
+    </h2>
+
+    <div class="foerd-grid">
+      <div class="foerd-intro" data-reveal="left">
+        <p>
+          Viele unserer Kunden in Vaihingen (Enz) wissen nicht, welche staatlichen Fördermittel
+          sie für ihre Elektro-Projekte abrufen können. Wir kennen die aktuellen Programme
+          und helfen Ihnen, das Maximum herauszuholen.
+        </p>
+        <p>
+          Ob KfW-Darlehen für Ihre Wallbox, BAFA-Zuschuss für Ihren Batteriespeicher oder
+          Förderung bei der Sanierung – <strong style="color:var(--text-main)">wir klären
+          die Förderfähigkeit kostenlos beim ersten Beratungsgespräch.</strong>
+        </p>
+        <a href="#kontakt" class="btn btn-ghost" style="margin-top:.5rem;" aria-label="Förderberatung anfragen">
+          Förderberatung anfragen →
+        </a>
+      </div>
+
+      <div class="foerd-programs" data-reveal="right">
+        <div class="program-card">
+          <div class="prog-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+          </div>
+          <div class="prog-body">
+            <h4>KfW 442 – Wallbox</h4>
+            <p>Förderung E-Ladeinfrastruktur für Elektroautos im privaten Bereich</p>
+          </div>
+          <div class="prog-badge">bis 900 €</div>
+        </div>
+
+        <div class="program-card">
+          <div class="prog-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v1m0 16v1M4.22 4.22l.71.71m12.73 12.73l.71.71M3 12h1m16 0h1M4.93 19.07l.71-.71M18.36 5.64l.71-.71M9 12a3 3 0 106 0 3 3 0 00-6 0z"/></svg>
+          </div>
+          <div class="prog-body">
+            <h4>BAFA – Batteriespeicher</h4>
+            <p>Bundesförderung für effiziente Gebäude – Speicher in Kombination mit PV</p>
+          </div>
+          <div class="prog-badge">bis 3.000 €</div>
+        </div>
+
+        <div class="program-card">
+          <div class="prog-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <div class="prog-body">
+            <h4>KfW 261 – Gebäudesanierung</h4>
+            <p>Darlehen &amp; Tilgungszuschüsse für energetische Sanierungsmaßnahmen</p>
+          </div>
+          <div class="prog-badge">bis 9.000 €</div>
+        </div>
+
+        <div class="program-card">
+          <div class="prog-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div class="prog-body">
+            <h4>Steuerliche Absetzbarkeit</h4>
+            <p>Handwerkerleistungen im Eigenheim bis zu 20% steuerlich absetzbar – bis 1.200 € Ersparnis</p>
+          </div>
+          <div class="prog-badge">bis 1.200 €</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     PROZESS
+══════════════════════════════ -->
+<section id="prozess" class="section-pad" aria-labelledby="prozess-h2">
+  <div class="container">
+    <div class="eyebrow mb-2" data-reveal="up">So läuft es ab</div>
+    <h2 id="prozess-h2" class="display-l" data-reveal="up" data-delay="1">
+      Vom Anruf zur<br>
+      <span class="text-primary">fertigen Lösung</span>
+    </h2>
+
+    <div class="prozess-grid">
+      <div class="prozess-step" data-reveal="up" data-delay="1">
+        <div class="prozess-num" aria-hidden="true">1</div>
+        <h3>Kontakt aufnehmen</h3>
+        <p>Rufen Sie an oder nutzen Sie das Formular. Wolfgang meldet sich persönlich – in der Regel noch am selben Tag.</p>
+        <div class="ghost-num" aria-hidden="true">1</div>
+      </div>
+      <div class="prozess-step" data-reveal="up" data-delay="2">
+        <div class="prozess-num" aria-hidden="true">2</div>
+        <h3>Vor-Ort-Besichtigung</h3>
+        <p>Kostenlose Bestandsaufnahme direkt bei Ihnen. Wir klären was gemacht werden muss – ohne Fachjargon, ohne Zeitdruck.</p>
+        <div class="ghost-num" aria-hidden="true">2</div>
+      </div>
+      <div class="prozess-step" data-reveal="up" data-delay="3">
+        <div class="prozess-num" aria-hidden="true">3</div>
+        <h3>Festpreis-Angebot</h3>
+        <p>Sie erhalten ein schriftliches Angebot mit klaren Preisen. Keine Stundenlohnfallen, keine Überraschungen auf der Rechnung.</p>
+        <div class="ghost-num" aria-hidden="true">3</div>
+      </div>
+      <div class="prozess-step" data-reveal="up" data-delay="4">
+        <div class="prozess-num" aria-hidden="true">4</div>
+        <h3>Ausführung &amp; Abnahme</h3>
+        <p>Pünktliche Ausführung, saubere Arbeit. Am Ende erhalten Sie Übergabeprotokoll und Dokumentation – alles VDE-konform.</p>
+        <div class="ghost-num" aria-hidden="true">4</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     BEWERTUNGEN
+══════════════════════════════ -->
+<section id="bewertungen" class="section-pad" aria-labelledby="review-h2">
+  <div class="container">
+    <div class="eyebrow mb-2" data-reveal="up">Kundenstimmen</div>
+    <h2 id="review-h2" class="display-l" data-reveal="up" data-delay="1">
+      Was Kunden aus<br>
+      <span class="text-primary">Vaihingen sagen</span>
+    </h2>
+
+    <div class="reviews-layout">
+      <div class="review-score-box" data-reveal="left">
+        <div class="score-big" aria-label="Bewertung 4,5 von 5 Sternen">4,5</div>
+        <div class="score-stars" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+        </div>
+        <p class="score-label">8 Bewertungen auf Google</p>
+        <div class="score-bars" role="list" aria-label="Bewertungsverteilung">
+          <div class="bar-row" role="listitem"><span class="bar-label">5★</span><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div><span class="bar-pct">88%</span></div>
+          <div class="bar-row" role="listitem"><span class="bar-label">4★</span><div class="bar-track"><div class="bar-fill" style="width:12%;background:rgba(245,166,35,.5)"></div></div><span class="bar-pct">12%</span></div>
+          <div class="bar-row" role="listitem"><span class="bar-label">3★</span><div class="bar-track"><div class="bar-fill" style="width:0%;background:rgba(245,166,35,.3)"></div></div><span class="bar-pct">0%</span></div>
+          <div class="bar-row" role="listitem"><span class="bar-label">2★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-pct">0%</span></div>
+          <div class="bar-row" role="listitem"><span class="bar-label">1★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-pct">0%</span></div>
+        </div>
+        <div class="google-badge" aria-label="Google Bewertungen">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Google Bewertungen
+        </div>
+      </div>
+
+      <div class="review-cards" data-reveal="right">
+        <article class="review-card">
+          <div class="quote-mark" aria-hidden="true">"</div>
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">DR</div>
+            <div class="review-meta">
+              <h4>David Reith</h4>
+              <div class="review-stars" aria-label="5 Sterne"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg></div>
+              <span class="review-date">vor 7 Monaten · Google</span>
+            </div>
+          </div>
+          <p class="review-text">Herr Wolfgang ist sehr kurzfristig, einen Tag vor seinem Urlaub eingesprungen, um uns termingerechten Strom für nachfolgende Gewerke bei der Sanierung zu sichern. Dabei sehr lösungsorientiert. Danke für Ihre Hilfe!</p>
+        </article>
+
+        <article class="review-card">
+          <div class="quote-mark" aria-hidden="true">"</div>
+          <div class="review-header">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#1E8A5E,#0F5C3F);" aria-hidden="true">SH</div>
+            <div class="review-meta">
+              <h4>Sabrina Heer</h4>
+              <div class="review-stars" aria-label="5 Sterne"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg></div>
+              <span class="review-date">vor 4 Jahren · Google</span>
+            </div>
+          </div>
+          <p class="review-text">Wer schon einmal auf Handwerker angewiesen war, weiß die Qualität, Zuverlässigkeit und Erreichbarkeit von Michael Wolfgang zu schätzen. Er hält seine Termine absolut ein und ist auch am Wochenende für seine Kunden erreichbar.</p>
+        </article>
+
+        <article class="review-card">
+          <div class="quote-mark" aria-hidden="true">"</div>
+          <div class="review-header">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#2A5C9A,#1A3C6E);" aria-hidden="true">FL</div>
+            <div class="review-meta">
+              <h4>Frank Long</h4>
+              <div class="review-stars" aria-label="5 Sterne"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg></div>
+              <span class="review-date">vor 4 Jahren · Google</span>
+            </div>
+          </div>
+          <p class="review-text">Sehr zu empfehlen. Wir beauftragen keinen anderen mehr. Gesamte Hauselektrik wurde von ihm neu gemacht sowie verschiedene Erweiterungen und Sonderwünsche. Geht nicht gibt's bei ihm nicht.</p>
+        </article>
+
+        <a href="https://maps.google.com" class="btn btn-outline" style="align-self:flex-start;" aria-label="Alle Google-Bewertungen ansehen">
+          Alle Bewertungen auf Google ansehen →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     EINSATZGEBIET
+══════════════════════════════ -->
+<section id="einsatzgebiet" class="section-pad" aria-labelledby="gebiet-h2">
+  <div class="container">
+    <div class="eyebrow mb-2" data-reveal="up">Einsatzgebiet</div>
+    <h2 id="gebiet-h2" class="display-l" data-reveal="up" data-delay="1">
+      Ihr Elektriker für<br>
+      <span class="text-primary">den Enzkreis</span>
+    </h2>
+
+    <div class="gebiet-split">
+      <div class="gebiet-text" data-reveal="left">
+        <p>
+          Elektro ESW ist Ihr regionaler Elektriker für <strong style="color:var(--text-main)">Vaihingen an der Enz</strong>
+          und den gesamten Enzkreis. Wir sind schnell vor Ort – in Vaihingen, Sachsenheim, Mühlacker,
+          Bietigheim-Bissingen und den umliegenden Gemeinden.
+        </p>
+        <p>
+          Kurze Wege bedeuten für Sie: schnellere Reaktionszeiten, geringere Anfahrtskosten,
+          und einen Elektriker der die lokalen Gegebenheiten kennt. Von Sersheim bis Horrheim,
+          von Ensingen bis Kleinglattbach – wir sind in Ihrer Nähe.
+        </p>
+
+        <div class="city-tags" role="list" aria-label="Einsatzgebiete">
+          <span class="city-tag primary" role="listitem">Vaihingen a. d. Enz</span>
+          <span class="city-tag" role="listitem">Sachsenheim</span>
+          <span class="city-tag" role="listitem">Mühlacker</span>
+          <span class="city-tag" role="listitem">Bietigheim-Bissingen</span>
+          <span class="city-tag" role="listitem">Ludwigsburg</span>
+          <span class="city-tag" role="listitem">Pforzheim</span>
+          <span class="city-tag" role="listitem">Sersheim</span>
+          <span class="city-tag" role="listitem">Ensingen</span>
+          <span class="city-tag" role="listitem">Kleinglattbach</span>
+          <span class="city-tag" role="listitem">Horrheim</span>
+          <span class="city-tag" role="listitem">Aurich</span>
+          <span class="city-tag" role="listitem">Enzkreis gesamt</span>
+        </div>
+      </div>
+
+      <div class="radar-visual" aria-hidden="true" data-reveal="scale">
+        <div class="radar-ring"></div>
+        <div class="radar-ring"></div>
+        <div class="radar-ring"></div>
+        <div class="radar-sweep"></div>
+        <div class="radar-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FAQ
+══════════════════════════════ -->
+<section id="faq" class="section-pad" aria-labelledby="faq-h2">
+  <div class="container">
+    <div class="eyebrow mb-2" data-reveal="up">Häufige Fragen</div>
+    <h2 id="faq-h2" class="display-l" data-reveal="up" data-delay="1">
+      Fragen die sich<br>
+      <span class="text-primary">viele stellen</span>
+    </h2>
+
+    <div class="faq-grid" data-reveal="up" data-delay="2">
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Was kostet ein Elektriker in Vaihingen (Enz)?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">
+            Der Stundensatz eines Elektrikers im Enzkreis liegt typischerweise zwischen 70 und 120 €/Std. plus Materialkosten. Wir erstellen Ihnen immer vorab einen schriftlichen Kostenvoranschlag – so kennen Sie die Gesamtkosten bevor wir beginnen. Keine versteckten Gebühren.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Wie schnell erhalte ich ein Angebot?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">
+            Nach Ihrer Anfrage meldet sich Wolfgang in der Regel noch am selben Werktag zurück. Nach einer kostenlosen Vor-Ort-Besichtigung erhalten Sie Ihr schriftliches Festpreisangebot innerhalb von 48 Stunden – damit Sie planen können.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Können Sie auch eine Wallbox installieren und für KfW anmelden?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">
+            Ja. Wir installieren Wallboxen aller gängigen Hersteller und führen die fachgerechte Anmeldung beim Netzbetreiber durch. Die Anlage wird KfW-konform ausgeführt, sodass Sie die Förderung (KfW 442) unkompliziert beantragen können. Wir beraten Sie beim ersten Gespräch kostenlos dazu.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Wie lange dauert eine komplette Elektrosanierung?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">
+            Das hängt vom Umfang ab. Eine Unterverteilung tauschen wir in einem Tag aus. Eine komplette Sanierung eines 150m²-Einfamilienhauses dauert je nach Aufwand 3 bis 5 Arbeitstage. Nach der Besichtigung erhalten Sie eine genaue Zeitplanung.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Darf ich als Laie selbst an der Elektroinstallation arbeiten?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">
+            Einfache Arbeiten wie das Wechseln einer Steckdose oder Schalter sind oft erlaubt – aber: Alles was die Hauptleitung, die Unterverteilung oder neue Stromkreise betrifft, muss von einer Elektrofachkraft ausgeführt werden. Falsche Installationen können Haus und Leben gefährden und führen zum Verlust der Versicherungsleistung.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Geben Sie Garantie auf Ihre Arbeiten?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">
+            Ja. Wir gewähren 2 Jahre Gewährleistung auf alle ausgeführten Elektroarbeiten – gesetzliche Grundlage ist § 634a BGB. Zusätzlich erhalten Sie nach Abschluss ein schriftliches Übergabeprotokoll mit Dokumentation aller Installationen.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Können Sie meine Elektrik auch für einen Hauskauf prüfen?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">
+            Ja – das ist eine unserer häufigsten Anfragen. Wir begutachten die vorhandene Elektroinstallation, prüfen auf Normenkonformität und erstellen eine verständliche Einschätzung über notwendige Maßnahmen und Kosten. Ideal für Hauskäufer die wissen wollen was auf sie zukommt.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
+          Führen Sie auch Smart Home Nachrüstungen durch?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" role="region">
+          <div class="faq-body-inner">
+            Ja. Sowohl kabelgebundene KNX-Systeme als auch nachrüstbare Funksysteme wie Philips Hue, Homematic IP oder ähnliche. Wir beraten Sie welches System zu Ihrem Haus und Budget passt – ohne Herstellerbindung.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     CTA BAND
+══════════════════════════════ -->
+<section id="cta-band" aria-labelledby="cta-h2">
+  <div class="cta-band-bg" aria-hidden="true"></div>
+  <div class="cta-band-line" aria-hidden="true"></div>
+  <div class="container">
+    <div class="cta-band-content">
+      <div class="eyebrow" style="justify-content:center;margin-bottom:1.2rem;" data-reveal="up">
+        Bereit loszulegen?
+      </div>
+      <h2 id="cta-h2" class="display-l" data-reveal="up" data-delay="1">
+        Strom soll fließen.<br>
+        <span class="text-primary">Sicher. Jetzt.</span>
+      </h2>
+      <p data-reveal="up" data-delay="2">
+        Ob Neuinstallation, Sanierung oder der erste Schritt zum Smart Home –
+        Wolfgang ist Ihr persönlicher Ansprechpartner im Enzkreis.
+        Kostenloses Erstgespräch, Festpreis-Angebot, keine Überraschungen.
+      </p>
+      <div class="cta-band-actions" data-reveal="up" data-delay="3">
+        <a href="#kontakt" class="btn btn-primary" aria-label="Kostenloses Angebot anfordern">
+          Kostenloses Angebot anfordern →
+        </a>
+        <a href="tel:07042120734" class="btn btn-outline" aria-label="Wolfgang direkt anrufen">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          Jetzt anrufen – 07042 / 120734
+        </a>
+      </div>
+      <p class="micro-copy" style="text-align:center;margin-top:1rem;" data-reveal="up" data-delay="4">
+        Kostenlos · Unverbindlich · Persönlicher Rückruf innerhalb von 2 Stunden
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     KONTAKT
+══════════════════════════════ -->
+<section id="kontakt" class="section-pad" aria-labelledby="kontakt-h2">
+  <div class="container">
+    <div class="eyebrow mb-2" data-reveal="up">Kontakt &amp; Anfrage</div>
+    <h2 id="kontakt-h2" class="display-l mb-3" data-reveal="up" data-delay="1">
+      Sprechen wir.<br>
+      <span class="text-primary">Heute noch.</span>
+    </h2>
+
+    <div class="kontakt-split">
+      <div class="kontakt-info" data-reveal="left">
+        <div>
+          <p class="kontakt-heading">Direkter Kontakt</p>
+
+          <div class="kontakt-item mb-2">
+            <div class="k-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </div>
+            <div class="k-text">
+              <span class="k-label">Büro</span>
+              <span class="k-val"><a href="tel:07042120734">07042 / 120 734</a></span>
+            </div>
+          </div>
+
+          <div class="kontakt-item mb-2">
+            <div class="k-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="k-text">
+              <span class="k-label">Mobil</span>
+              <span class="k-val"><a href="tel:01607846022">0160 / 784 6022</a></span>
+            </div>
+          </div>
+
+          <div class="kontakt-item mb-2">
+            <div class="k-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="k-text">
+              <span class="k-label">E-Mail</span>
+              <span class="k-val"><a href="mailto:elektro-service-wolfgang@web.de">elektro-service-wolfgang@web.de</a></span>
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <div class="k-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="k-text">
+              <span class="k-label">Adresse</span>
+              <span class="k-val">Auricher Straße 19<br>71665 Vaihingen an der Enz</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="kontakt-heading">Öffnungszeiten</p>
+          <div class="oeffnungszeiten" role="list" aria-label="Öffnungszeiten">
+            <div class="oz-row" role="listitem"><span class="oz-day">Mo – Fr</span><span class="oz-time">08:00 – 17:00 Uhr</span></div>
+            <div class="oz-row" role="listitem"><span class="oz-day">Samstag</span><span class="oz-time">Geschlossen</span></div>
+            <div class="oz-row" role="listitem"><span class="oz-day">Sonntag</span><span class="oz-time">Geschlossen</span></div>
+          </div>
+          <div class="notdienst-note" style="margin-top:.8rem;" role="note">
+            ✓ Angebot innerhalb von 48h nach Besichtigung
+          </div>
+        </div>
+      </div>
+
+      <div class="kontakt-form-wrap" data-reveal="right">
+        <p class="form-title">Kostenloses Angebot anfordern</p>
+        <div class="form-grid" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Name <span class="req">*</span></label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Max Mustermann" required aria-required="true"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="telefon">Telefon <span class="req">*</span></label>
+              <input class="form-input" type="tel" id="telefon" name="telefon" placeholder="07042 / ..." required aria-required="true"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="leistung">Gewünschte Leistung <span class="req">*</span></label>
+            <select class="form-select" id="leistung" name="leistung" required aria-required="true">
+              <option value="" disabled selected>Bitte wählen…</option>
+              <option>Elektroinstallation / Neuinstallation</option>
+              <option>Elektrosanierung / Altbau</option>
+              <option>Smart Home Installation</option>
+              <option>Photovoltaik-Anschluss</option>
+              <option>Wallbox / E-Mobilität</option>
+              <option>Elektro-Störungsbeseitigung</option>
+              <option>Hausanschluss / Unterverteilung</option>
+              <option>Beleuchtungsplanung</option>
+              <option>Hausinspektion / Gutachten</option>
+              <option>Sonstiges</option>
+              
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">E-Mail <span style="color:var(--text-faint);font-weight:400">(optional)</span></label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="ihre@email.de"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ort">Ort / Adresse <span style="color:var(--text-faint);font-weight:400">(optional)</span></label>
+              <input class="form-input" type="text" id="ort" name="ort" placeholder="Vaihingen (Enz)"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="nachricht">Ihr Anliegen <span style="color:var(--text-faint);font-weight:400">(optional)</span></label>
+            <textarea class="form-textarea" id="nachricht" name="nachricht" placeholder="Kurze Beschreibung was gemacht werden soll…"></textarea>
+          </div>
+
+          <p class="form-privacy">
+            Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten zur Bearbeitung Ihrer Anfrage zu.
+            Weitere Informationen finden Sie in unserer <a href="#">Datenschutzerklärung</a>.
+          </p>
+
+          <button class="btn-submit" id="submitBtn" onclick="handleSubmit(event)" aria-label="Kostenloses Angebot jetzt anfordern">
+            <span id="submitText">Kostenloses Angebot anfordern →</span>
+          </button>
+          <p class="micro-copy" style="text-align:center;">Kostenlos · Unverbindlich · Antwort innerhalb von 24h</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-mark">Elektro <span>ESW</span></div>
+        <p>Inhabergeführter Elektrobetrieb in Vaihingen an der Enz. Persönlich. Zuverlässig. Mit über 25 Jahren Erfahrung im Enzkreis.</p>
+        <div class="footer-cert-badges">
+          <span class="footer-cert">VDE-Norm</span>
+          <span class="footer-cert">Inhabergeführt</span>
+          <span class="footer-cert">Haftpflicht</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Leistungen</h5>
+        <ul>
+          <li><a href="#leistungen">Elektroinstallation Vaihingen</a></li>
+          <li><a href="#leistungen">Smart Home Vaihingen Enz</a></li>
+          <li><a href="#leistungen">PV-Anlagen Elektroanschluss</a></li>
+          <li><a href="#leistungen">Wallbox / E-Mobilität</a></li>
+          <li><a href="#leistungen">LED-Beleuchtung</a></li>
+          <li><a href="#leistungen">Gewerbe-Elektrik</a></li>
+          <li><a href="#leistungen">Altbausanierung</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#referenzen">Referenzen</a></li>
+          <li><a href="#foerderung">Förderberatung</a></li>
+          <li><a href="#bewertungen">Bewertungen</a></li>
+          <li><a href="#einsatzgebiet">Einsatzgebiet</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <a href="tel:07042120734">07042 / 120 734</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          <a href="tel:01607846022">0160 / 784 6022</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <a href="mailto:elektro-service-wolfgang@web.de">elektro-service-wolfgang@web.de</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span>Auricher Straße 19, 71665 Vaihingen (Enz)</span>
+        </div>
+        <div style="margin-top:1rem;font-size:.8rem;color:var(--text-faint);">
+          Mo–Fr: 08:00–17:00 Uhr<br>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Elektro ESW – Elektro-Service Wolfgang. Auricher Straße 19, 71665 Vaihingen an der Enz.</p>
+      <div class="footer-legal">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Call Button (Mobile) -->
+<a href="tel:07042120734" class="float-call" aria-label="Jetzt anrufen – Elektro ESW">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+</a>
+
+<!-- ══════════════════════════════
+     JAVASCRIPT
+══════════════════════════════ -->
+<script>
+/* ── CUSTOM CURSOR ── */
+(function(){
+  if(!matchMedia('(hover:hover)').matches) return;
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  let rx=0,ry=0,mx=0,my=0;
+
+  document.addEventListener('mousemove',e=>{
+    mx=e.clientX; my=e.clientY;
+    dot.style.left=mx+'px'; dot.style.top=my+'px';
+  });
+
+  (function animRing(){
+    rx+=(mx-rx)*.12;
+    ry+=(my-ry)*.12;
+    ring.style.left=rx+'px'; ring.style.top=ry+'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  document.querySelectorAll('a,button,.service-card,.ref-card,.program-card,.faq-trigger').forEach(el=>{
+    el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));
+  });
+})();
+
+/* ── NAVIGATION SCROLL ── */
+(function(){
+  const nav = document.getElementById('nav');
+  const onScroll = ()=> nav.classList.toggle('stuck', scrollY>60);
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+
+/* ── MOBILE DRAWER ── */
+let drawerOpen = false;
+function toggleDrawer(){
+  drawerOpen = !drawerOpen;
+  const drawer = document.getElementById('drawer');
+  const b1=document.getElementById('b1');
+  const b2=document.getElementById('b2');
+  const b3=document.getElementById('b3');
+  drawer.classList.toggle('open',drawerOpen);
+  if(drawerOpen){
+    b1.style.transform='translateY(6.5px) rotate(45deg)';
+    b2.style.opacity='0';
+    b3.style.transform='translateY(-6.5px) rotate(-45deg)';
+  } else {
+    b1.style.transform=''; b2.style.opacity=''; b3.style.transform='';
+  }
+}
+function closeDrawer(){
+  drawerOpen=false;
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('b1').style.transform='';
+  document.getElementById('b2').style.opacity='';
+  document.getElementById('b3').style.transform='';
+}
+
+/* ── SCROLL REVEAL ── */
+(function(){
+  const els = document.querySelectorAll('[data-reveal]');
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('revealed');
+        observer.unobserve(e.target);
+      }
+    });
+  },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(el=>observer.observe(el));
+})();
+
+/* ── FAQ ACCORDION ── */
+function toggleFaq(trigger){
+  const allTriggers = document.querySelectorAll('.faq-trigger');
+  const allBodies = document.querySelectorAll('.faq-body');
+  const body = trigger.nextElementSibling;
+  const isOpen = trigger.classList.contains('active');
+
+  // Close all
+  allTriggers.forEach(t=>{t.classList.remove('active');t.setAttribute('aria-expanded','false');});
+  allBodies.forEach(b=>{b.style.maxHeight='0';});
+
+  // Open if was closed
+  if(!isOpen){
+    trigger.classList.add('active');
+    trigger.setAttribute('aria-expanded','true');
+    body.style.maxHeight = body.scrollHeight + 'px';
+  }
+}
+
+/* ── FORM SUBMIT ── */
+function handleSubmit(e){
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const txt = document.getElementById('submitText');
+  const name = document.getElementById('name').value.trim();
+  const tel = document.getElementById('telefon').value.trim();
+  const leistung = document.getElementById('leistung').value;
+
+  if(!name || !tel || !leistung){
+    // Shake effect on empty required fields
+    [document.getElementById('name'),document.getElementById('telefon'),document.getElementById('leistung')]
+      .forEach(f=>{
+        if(!f.value.trim()){
+          f.style.borderColor='rgba(220,50,50,.7)';
+          f.style.boxShadow='0 0 0 3px rgba(220,50,50,.15)';
+          setTimeout(()=>{f.style.borderColor='';f.style.boxShadow='';},2000);
+        }
+      });
+    return;
+  }
+
+  btn.disabled=true;
+  txt.textContent='Wird gesendet…';
+  btn.style.opacity='.7';
+
+  setTimeout(()=>{
+    btn.classList.add('sent');
+    btn.style.opacity='1';
+    txt.textContent='✓ Anfrage gesendet! Wir melden uns schnellstmöglich bei Ihnen.';
+  },1200);
+}
+
+/* ── STAT COUNTER ANIMATION ── */
+(function(){
+  const stats = document.querySelectorAll('.stat-num, .score-big');
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        observer.unobserve(e.target);
+      }
+    });
+  },{threshold:.5});
+  stats.forEach(s=>observer.observe(s));
+})();
+</script>
+</body>
+</html>
